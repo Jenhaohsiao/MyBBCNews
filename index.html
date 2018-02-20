@@ -13,7 +13,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 
-    <title>JenHao's BBC NEWS</title>
+    <title>JenHao's NEWS</title>
 
 </head>
 
@@ -141,7 +141,7 @@
 
         <div class="row cool">
             <!-- welcome and date-->
-            <p> Welcome to BBC.com</p>
+            <p> Welcome to <span class="JenHaoNews">JenHao NEWS</span></p>
             <p>
                 <span id="date"></span>
             </p>
@@ -151,40 +151,67 @@
         <div class="row">
             <!--headNews-->
             <div class="col span-1-of-2 leftBlock">
-                <a href="">
-                    <img id="headNews" src="https://www.gannett-cdn.com/-mm-/b53368a6964a0bd261e1f1a75e9125e206e0b2c4/c=0-0-3633-2052&r=x1683&c=3200x1680/local/-/media/2018/02/19/Phoenix/Phoenix/636546603117764294-dyson2.jpg" alt="">
-                </a>
-                <ul class="headNews_container">
-                    <p>
-                        <span id="title"></span>
-                    </p>
-                    <p>
-                        <span id="description"></span>
-                    </p>
-                    <p>
-                        <span id="publishedAt"></span>
-                    </p>
-                </ul>
+                <div class="headNews_img_container" id="headNews">
+                        <!-- <a href="">
+                                <img id="headNews" src="" alt="">
+                            </a> -->
+
+                    <ul class="headNews_container">
+                        <p>
+                            <span id="title"></span>
+                        </p>
+                        <p>
+                            <span id="description"></span>
+                        </p>
+                        <p>
+                            <span id="publishedAt"></span>
+                        </p>
+                    </ul>
+                </div>
+               
+       
             </div>
 
             <div class="col span-1-of-2 rightBlock"> <!-- head news right -->
                 <div class="section group">
                     <div class="col span-1-of-2">
-                        TEST1
+                        <div class="headNews_container_rightside" id="headNewsRightSide1" >
+                            <!-- <a href="">
+                                <img class="headNews_container_rightside"  src="" alt="">
+                            </a> -->
+                            <p>new1</p>
+                        </div>
+                     
                     </div>
 
                     <div class="col span-1-of-2">
-                        TEST2
+                        <div class="headNews_container_rightside"  id="headNewsRightSide2" >
+                            <!-- <a href="">
+                                <img class="headNews_container_rightside" id="headNewsRightSide2" src="" alt="">
+                            </a> -->
+                            <p>new2</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="section group">
                     <div class="col span-1-of-2">
-                        TEST1
+                        <div class="headNews_container_rightside" id="headNewsRightSide3" >
+                            <!-- <a href="">
+                                <img class="headNews_container_rightside" id="headNewsRightSide3" src="" alt="">
+                            </a> -->
+                            <p>new3</p>
+                        </div>
                     </div>
 
                     <div class="col span-1-of-2">
-                        TEST2
+                        <div class="headNews_container_rightside" id="headNewsRightSide4" >
+                            <!-- <a href="">
+                                <img class="headNews_container_rightside" id="headNewsRightSide4" src="" alt="">
+                            </a> -->
+                            <p>new4</p>
+                        </div>
+                    
                     </div>
                 </div>
             </div><!-- head news right end-->
@@ -194,6 +221,7 @@
 
 
     </section>
+
 
 
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
