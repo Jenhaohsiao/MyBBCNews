@@ -1,0 +1,154 @@
+/* ================================
+Global Rule
+====================================*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style:none;
+    font-size:20px;
+    font-family:  lato, sans-serif;
+    overflow-wrap: break-word;
+    text-decoration: none;
+}
+
+html{
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.row {
+    max-width: 1280px;
+    margin:0 auto;
+}
+
+/* Section One */
+
+.secOne{
+    background-color: black;
+}
+
+.logo{
+
+    float:left;
+    margin:8px 15px 0 0;
+     
+}
+
+.logo img{
+    height:27px;
+}
+
+.navi a{
+    color: white;
+    font-size: 70%;
+    padding: 10px 14px;
+    
+
+}
+
+.navi li{
+    display: inline-block;
+    border-left: 1px solid grey;
+    height: 40px;
+    padding-top: 8px;
+}
+
+.navi li input[type=search]{
+    width:60%;
+    margin-left:15px;
+    padding-left:5px;
+    height:25px;
+    border:none;
+}
+
+.ion-arrow-down-b{
+    font-size: 80%;
+    display: inline-block;
+    margin-left: 60px;
+    padding:2px;
+    cursor: pointer;
+}
+
+.ion-ios-search-strong{
+    background-color: white;
+    padding: 1px 6px;
+    position: fixed;
+}
+
+.ion-person{
+    background-color: white;
+    color:black;
+    padding:2px 6px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-right:10px;
+    font-size:15px;
+}
+
+.navi li:nth-child(1){
+    padding-right: 60px;
+}
+
+.navi li:hover{
+    border-bottom: 3px solid red;
+}
+
+.navi li:nth-child(11){
+    border:none;
+}
+
+/* Drop Down */
+.secTwo{
+    border:1px solid deepskyblue;
+}
+
+.items ul li a {
+    font-size: 80%;
+    color:black; 
+}
+
+.more{
+    float:left;
+    font-size: 150%;
+    text-transform: uppercase;
+    padding-bottom: 6%;
+    margin-left:6%;
+    padding-top:8px;
+}
+
+.items ul li {
+    display: inline-block;
+    padding-right: 80px;
+    padding-left: 5px;
+    margin-left:4%;
+    margin-top:10px;
+}
+
+.items ul li:hover {
+    background-color:black;
+    color:white;
+}
+
+.items ul li a:hover {
+
+    color:white;
+}
+
+
+/* Changes */
+.navi li:nth-child(10){
+    color:white;
+    font-size:70%;
+    padding-left:15px;
+
+}
+
+#navMore{
+    cursor: pointer;
+}
+
+.items {
+    display:none;
+}
