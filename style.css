@@ -18,12 +18,25 @@ html{
     overflow-x: hidden;
 }
 
+.JenHaoNews{
+    color:rgb(171, 12, 12);
+    font-weight: 700;
+}
+
 .row {
     max-width: 1280px;
     margin:0 auto;
 }
 
 /* Section One */
+
+
+
+.headNews_container{
+    max-width: 600px;
+    max-height: 400px;
+    padding:200px 10px 10px 10px;
+}
 
 .secOne{
     background-color: black;
@@ -169,20 +182,9 @@ html{
     float:right;
 }
 
-.leftBlock img{
-    width:auto;
-    max-width: 600px;
-    
-}
 
-.headNews_container{
-    width:auto;
-    max-width: 600px;
-    padding:10px;
-}
 .leftBlock ul{
     position: absolute;
-    margin-top: -150px;
     margin-left:10px;
     color: #ffffff;
     text-shadow: 1px 2px #000000;
@@ -200,4 +202,24 @@ html{
 .leftBlock ul #publishedAt{
     font-size: 15px;
     font-weight: 300;
+}
+
+.headNews_container_rightside{
+    width:400px;
+    height:200px;
+}
+#headNews{
+    background-size: auto 400px;
+}
+
+.headNews_img_container{
+    width:600px;
+    height:400px;
+}
+
+#headNewsRightSide1,
+#headNewsRightSide2,
+#headNewsRightSide3,
+#headNewsRightSide4{
+    background-size: auto 200px;
 }
