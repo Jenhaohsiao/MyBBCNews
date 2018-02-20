@@ -99,7 +99,8 @@ html{
     border:none;
 }
 
-/* Drop Down */
+/* Section Two -Drop Down */
+
 .secTwo{
     border:1px solid deepskyblue;
 }
@@ -151,4 +152,52 @@ html{
 
 .items {
     display:none;
+}
+/* Section Three */
+
+.secThree{
+    background-color: #e7e8e1;
+    padding:20px 0;
+}
+
+.cool p{
+    display: inline-block;
+    color:#68778e;
+}
+
+.cool p:nth-child(2) {
+    float:right;
+}
+
+.leftBlock img{
+    width:auto;
+    max-width: 600px;
+    
+}
+
+.headNews_container{
+    width:auto;
+    max-width: 600px;
+    padding:10px;
+}
+.leftBlock ul{
+    position: absolute;
+    margin-top: -150px;
+    margin-left:10px;
+    color: #ffffff;
+    text-shadow: 1px 2px #000000;
+    
+}
+
+.leftBlock ul #title{
+    font-size: 25px;
+    font-weight: 500;
+}
+.leftBlock ul #description{
+    font-size: 15px;
+    font-weight: 300;
+}
+.leftBlock ul #publishedAt{
+    font-size: 15px;
+    font-weight: 300;
 }
