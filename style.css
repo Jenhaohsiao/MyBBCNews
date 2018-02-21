@@ -5,12 +5,15 @@ Global Rule
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
     list-style:none;
     font-size:20px;
     font-family:  lato, sans-serif;
-    overflow-wrap: break-word;
     text-decoration: none;
+
+    /* overflow-wrap: break-word; */
+    /* box-sizing: border-box; */
+    
 }
 
 html{
@@ -18,15 +21,7 @@ html{
     overflow-x: hidden;
 }
 
-.JenHaoNews{
-    color:rgb(171, 12, 12);
-    font-weight: 700;
-}
 
-.row {
-    max-width: 1280px;
-    margin:0 auto;
-}
 
 /* Section One */
 
@@ -50,7 +45,7 @@ html{
 }
 
 .logo img{
-    height:27px;
+    height:45px;
 }
 
 .navi a{
@@ -155,8 +150,6 @@ html{
 .navi li:nth-child(10){
     color:white;
     font-size:70%;
-    padding-left:15px;
-
 }
 
 #navMore{
@@ -166,19 +159,21 @@ html{
 .items {
     display:none;
 }
-/* Section Three */
+/* Welcome Bar Section*/
 
-.secThree{
+.welcomeBarSection{
     background-color: #e7e8e1;
-    padding:20px 0;
-}
-
-.cool p{
-    display: inline-block;
+    padding:20px 0 0 0;
     color:#68778e;
 }
 
-.cool p:nth-child(2) {
+#JenHaoNews{
+    color:rgb(171, 12, 12);
+    font-weight: 700;
+}
+
+
+#currentDate{
     float:right;
 }
 
@@ -204,8 +199,11 @@ html{
     font-weight: 300;
 }
 
+.lineTwoSection{
+    color: #FFFFFF;
+}
 .headNews_container_rightside{
-    width:400px;
+    /* width:400px; */
     height:200px;
 }
 #headNews{
@@ -222,4 +220,12 @@ html{
 #headNewsRightSide3,
 #headNewsRightSide4{
     background-size: auto 200px;
+}
+
+/* line Two Section */
+
+
+.lineTwoSection{
+    margin: 20px 0 0 0;
+    color: #ffffff;
 }
