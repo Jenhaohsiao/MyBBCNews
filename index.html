@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!-- <link rel="stylesheet" href="css/grid.css"> -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="fonts/ionicons.min.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 
@@ -19,59 +21,55 @@
 
 <body>
     <section class="secOne">
+        <div class="container">
+            <div class="row">
+                <ul class="logo">
+                    <li>
+                        <a href="">
+                            <img src="img/logo/logo1.png" alt="">
+                        </a>
+                    </li>
+                </ul>
 
-        <div class="row">
-            <ul class="logo">
-                <li>
-                    <a href="">
-                        <img src="img/logo.png" alt="">
-                    </a>
-                </li>
-            </ul>
+                <ul class="navi">
+                    <li>
+                        <a href="">
+                            <i class="ion-person"></i>
+                            Sign in</a>
+                    </li>
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">News</a>
+                    </li>
+                    <li>
+                        <a href="">Sport</a>
+                    </li>
+                    <li>
+                        <a href="">Weather</a>
+                    </li>
+                    <li>
+                        <a href="">Shop</a>
+                    </li>
+                    <li>
+                        <a href="">Earth</a>
+                    </li>
 
-            <ul class="navi">
-                <li>
-                    <a href="">
-                        <i class="ion-person"></i>
-                        Sign in</a>
-                </li>
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">News</a>
-                </li>
-                <li>
-                    <a href="">Sport</a>
-                </li>
-                <li>
-                    <a href="">Weather</a>
-                </li>
-                <li>
-                    <a href="">Shop</a>
-                </li>
-                <li>
-                    <a href="">Earth</a>
-                </li>
-                <li>
-                    <a href="">Travel</a>
-                </li>
-                <li>
-                    <a href="">Capital</a>
-                </li>
-                <li id="navMore">
-                    More
-                    <i class="ion-arrow-down-b"></i>
-                </li>
-                <li>
-                    <input type="search" placeholder="Search...">
-                    <i class="ion-ios-search-strong"></i>
-                </li>
-            </ul>
+                    <li id="navMore">
+                        More
+                        <i class="ion-arrow-down-b"></i>
+                    </li>
+                    <li>
+                        <input type="search" placeholder="Search...">
+                        <i class="ion-ios-search-strong"></i>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
-
     <!-- secOne end-->
+
     <section class="secTwo">
         <div class="row">
             <div class="items" id="toggle">
@@ -137,89 +135,100 @@
     </section>
     <!-- sec Change end-->
 
-    <section class="secThree">
+    <section class="welcomeBarSection">
+        <!-- welcome and date-->
+        <div class="container ">
 
-        <div class="row cool">
-            <!-- welcome and date-->
-            <p> Welcome to <span class="JenHaoNews">JenHao NEWS</span></p>
-            <p>
-                <span id="date"></span>
-            </p>
+            <div class="row">
+                <div class="col-sm-4">
+                    <p> Welcome to
+                        <span id="JenHaoNews">JenHao NEWS</span>
+                    </p>
+
+
+                </div>
+
+                <div class="col-sm-4">
+                </div>
+
+                <div class="col-sm-4">
+                    <p>
+                        <span id="currentDate"></span>
+                    </p>
+                </div>
+            </div>
         </div>
-        <!-- welcome and date end-->
+    </section>
+    <!-- welcome and date end-->
 
-        <div class="row">
-            <!--headNews-->
-            <div class="col span-1-of-2 leftBlock">
-                <div class="headNews_img_container" id="headNews">
+
+    <section class="lineOneSection">
+        <!-- welcome and date-->
+        <div class="container ">
+            <div class="row">
+                <!--headNews-->
+                <div class="col  leftBlock">
+                    <div class="headNews_img_container" id="headNews">
                         <!-- <a href="">
                                 <img id="headNews" src="" alt="">
                             </a> -->
 
-                    <ul class="headNews_container">
-                        <p>
-                            <span id="title"></span>
-                        </p>
-                        <p>
-                            <span id="description"></span>
-                        </p>
-                        <p>
-                            <span id="publishedAt"></span>
-                        </p>
-                    </ul>
+                        <ul class="headNews_container">
+                            <p>
+                                <span id="title"></span>
+                            </p>
+                            <p>
+                                <span id="description"></span>
+                            </p>
+                            <p>
+                                <span id="publishedAt"></span>
+                            </p>
+                        </ul>
+                    </div>
+
+
                 </div>
-               
-       
+
             </div>
-
-            <div class="col span-1-of-2 rightBlock"> <!-- head news right -->
-                <div class="section group">
-                    <div class="col span-1-of-2">
-                        <div class="headNews_container_rightside" id="headNewsRightSide1" >
-                            <!-- <a href="">
-                                <img class="headNews_container_rightside"  src="" alt="">
-                            </a> -->
-                            <p>new1</p>
-                        </div>
-                     
-                    </div>
-
-                    <div class="col span-1-of-2">
-                        <div class="headNews_container_rightside"  id="headNewsRightSide2" >
-                            <!-- <a href="">
-                                <img class="headNews_container_rightside" id="headNewsRightSide2" src="" alt="">
-                            </a> -->
-                            <p>new2</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section group">
-                    <div class="col span-1-of-2">
-                        <div class="headNews_container_rightside" id="headNewsRightSide3" >
-                            <!-- <a href="">
-                                <img class="headNews_container_rightside" id="headNewsRightSide3" src="" alt="">
-                            </a> -->
-                            <p>new3</p>
-                        </div>
-                    </div>
-
-                    <div class="col span-1-of-2">
-                        <div class="headNews_container_rightside" id="headNewsRightSide4" >
-                            <!-- <a href="">
-                                <img class="headNews_container_rightside" id="headNewsRightSide4" src="" alt="">
-                            </a> -->
-                            <p>new4</p>
-                        </div>
-                    
-                    </div>
-                </div>
-            </div><!-- head news right end-->
         </div>
-        <!--headNews end-->
+    </section>
+    <!-- welcome and date end-->
 
+    <!--headNews end-->
 
+    <section class="lineTwoSection">
+        <div class="container ">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="headNews_container_rightside" id="headNewsRightSide1">
 
+                        <p>new1</p>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="headNews_container_rightside" id="headNewsRightSide2">
+
+                        <p>new2</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="headNews_container_rightside" id="headNewsRightSide3">
+
+                        <p>new3</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="headNews_container_rightside" id="headNewsRightSide4">
+
+                        <p>new4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 

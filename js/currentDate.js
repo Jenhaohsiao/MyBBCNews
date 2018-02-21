@@ -2,7 +2,7 @@ var currentDate = new Date();
 var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
 var	weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-var date = document.getElementById("date");
+var date = document.getElementById("currentDate");
 var time = document.getElementById("time");
 
 function getDate() {
