@@ -20,17 +20,13 @@ newsRequest.onload = function () {
     for (i=0; i<newsLength; i++){
         var newsImageUrl = newsJson['articles'][i]['urlToImage'];
         var sourceId = newsJson['articles'][i]['source']['id'];
+        console.log('newsJson:'+newsJson);
 
-        // console.log("sourceId="+sourceId);
-
-        if (newsImageUrl !== null ) {
+        if (sourceId !== "fox-news" && newsImageUrl !== null) {
             newsArray.push(i);
         }
     }
 
-
-    // console.log("newsArray="+newsArray);
-    // console.log("newsArray.length="+newsArray.length);
     var showNo = newsArray[0];
     
 
@@ -44,11 +40,12 @@ newsRequest.onload = function () {
     document.getElementById("headNews_publishedAt").innerText =showPublishedDate;
 
     var headNewsImageUrl =  newsJson['articles'][showNo]['urlToImage'] ;
-    // document.getElementById("headNews").src = headNewsImageUrl;
-    // console.log('headNewsImageUrl='+headNewsImageUrl);
-
-    // console.log('headNewsImageUrl='+ "\"url('"+headNewsImageUrl+"')\"");
     document.getElementById("headNews_BGImage").style.backgroundImage = "url('" + headNewsImageUrl +"')";
+
+    var sourceUrl = newsJson['articles'][showNo]['url'] ;
+    document.getElementById('headNews_url').href = sourceUrl;
+    
+
 
     //Set the leadLine right side 4 news
     var last4newsLength = newsArray.length;
@@ -56,17 +53,19 @@ newsRequest.onload = function () {
     var j = 0;
     for (i=1; i< 5 ;i++){
         var imageId= 'lineTwoSection_background_'+ (j+1);
+        var imageURL = 'lineTwoSection_URL_'+ (j+1);
         
         var lineTwoImageUrl = newsJson['articles'][newsArray[i]]['urlToImage'];
-        if (newsJson['articles'][newsArray[i]]['source']['id'] == "fox-news") {
-            lineTwoImageUrl = "https:" + lineTwoImageUrl;
-        }
         document.getElementById(imageId).src = lineTwoImageUrl;
         document.getElementById(imageId).style.backgroundImage = "url('" + lineTwoImageUrl +"')";
 
         var titleId= 'lineTwoSection_title_'+ (j+1);
         var lineTwoTitle = newsJson['articles'][newsArray[i]]['title'];
         document.getElementById(titleId).innerText = lineTwoTitle;
+
+        var line2SourceUrl = newsJson['articles'][newsArray[i]]['url'] ;
+        document.getElementById(imageURL).href = line2SourceUrl;
+
         j++;
     }
 
