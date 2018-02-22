@@ -180,7 +180,7 @@ html{
     position: absolute;
     margin-left:10px;
     color: #ffffff;
-    text-shadow: 1px 2px #000000;
+    text-shadow: 1px 2px 2px #000000;
 }
 
 .headNews_container{
@@ -240,6 +240,19 @@ html{
 }
 
 
+#headNews_BGImage:hover{
+    opacity: 0.8;
+  }
+
+.headNews_img_container:hover #headNews_title,
+.headNews_img_container:hover #headNews_description,
+.headNews_img_container:hover #headNews_publishedAt{
+    color: #000000;
+    opacity: 1;
+    text-shadow:1px 1px 3px #ffffff;
+}
+  
+
 
 /* line Two Section */
 
@@ -247,6 +260,7 @@ html{
 .lineTwoSection{
     margin: 20px 0 0 0;
     color: #ffffff;
+    text-shadow: 1px 2px 2px #000000;
 }
 
 .lineTwoSection_individual_container{
@@ -272,4 +286,14 @@ html{
     padding:5px;
     font-size: 15px;
 
+}
+
+
+#lineTwoSection_background_1:hover,
+#lineTwoSection_background_2:hover,
+#lineTwoSection_background_3:hover,
+#lineTwoSection_background_4:hover{
+    color: #000000;
+    opacity: 0.9;
+    text-shadow:1px 1px 2px #ffffff;
 }
