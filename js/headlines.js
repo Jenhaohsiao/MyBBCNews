@@ -9,26 +9,28 @@ newsRequest.send();
 var newsArray = [];
 
 
-
 newsRequest.onload = function () {
     var newsJson = newsRequest.response;
-    console.log(newsJson);
+    console.log('newsJson:'+newsJson);
     
     var newsLength = newsJson['totalResults'];
-    console.log("newsLength=" + newsLength);
+    // console.log("newsLength=" + newsLength);
 
     // get 5 news with image
     for (i=0; i<newsLength; i++){
         var newsImageUrl = newsJson['articles'][i]['urlToImage'];
+        var sourceId = newsJson['articles'][i]['source']['id'];
 
-        if (newsImageUrl !== null) {
+        // console.log("sourceId="+sourceId);
+
+        if (newsImageUrl !== null ) {
             newsArray.push(i);
         }
     }
 
 
-    console.log("newsArray="+newsArray);
-    console.log("newsArray.length="+newsArray.length);
+    // console.log("newsArray="+newsArray);
+    // console.log("newsArray.length="+newsArray.length);
     var showNo = newsArray[0];
     
 
@@ -43,9 +45,9 @@ newsRequest.onload = function () {
 
     var headNewsImageUrl =  newsJson['articles'][showNo]['urlToImage'] ;
     // document.getElementById("headNews").src = headNewsImageUrl;
-    console.log('headNewsImageUrl='+headNewsImageUrl);
+    // console.log('headNewsImageUrl='+headNewsImageUrl);
 
-    console.log('headNewsImageUrl='+ "\"url('"+headNewsImageUrl+"')\"");
+    // console.log('headNewsImageUrl='+ "\"url('"+headNewsImageUrl+"')\"");
     document.getElementById("headNews_BGImage").style.backgroundImage = "url('" + headNewsImageUrl +"')";
 
     //Set the leadLine right side 4 news
@@ -57,7 +59,7 @@ newsRequest.onload = function () {
         
         var lineTwoImageUrl = newsJson['articles'][newsArray[i]]['urlToImage'];
         if (newsJson['articles'][newsArray[i]]['source']['id'] == "fox-news") {
-            lineTwoImageUrl = "https://" + lineTwoImageUrl;
+            lineTwoImageUrl = "https:" + lineTwoImageUrl;
         }
         document.getElementById(imageId).src = lineTwoImageUrl;
         document.getElementById(imageId).style.backgroundImage = "url('" + lineTwoImageUrl +"')";
@@ -67,9 +69,5 @@ newsRequest.onload = function () {
         document.getElementById(titleId).innerText = lineTwoTitle;
         j++;
     }
-    
-
-  
-  
 
 }
