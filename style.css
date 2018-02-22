@@ -26,13 +26,6 @@ html{
 /* Section One */
 
 
-
-.headNews_container{
-    max-width: 600px;
-    max-height: 400px;
-    padding:200px 10px 10px 10px;
-}
-
 .secOne{
     background-color: black;
 }
@@ -177,50 +170,76 @@ html{
     float:right;
 }
 
+/* Line One section */
 
-.leftBlock ul{
+.lineOneSection{
+    background-color: #e7e8e1;
+}
+
+.lineOneSection ul{
     position: absolute;
     margin-left:10px;
     color: #ffffff;
     text-shadow: 1px 2px #000000;
+}
+
+.headNews_container{
+    padding: 20px;
+    width: auto;
+    position: relative;
     
 }
 
-.leftBlock ul #title{
-    font-size: 25px;
+#headNews_title{
+    font-size: 45px;
     font-weight: 500;
+    line-height: 1.1;
+    
+  
 }
-.leftBlock ul #description{
+#headNews_description{
+    font-size: 25px;
+    line-height: 1.1;
+    font-weight: 300;
+    padding-right: 45px;
+    position: absolute;
+    top:360px;
+}
+#headNews_publishedAt{
     font-size: 15px;
     font-weight: 300;
-}
-.leftBlock ul #publishedAt{
-    font-size: 15px;
-    font-weight: 300;
+    position: absolute;
+    top:470px;
+    float:right;
 }
 
 .lineTwoSection{
     color: #FFFFFF;
 }
-.headNews_container_rightside{
-    /* width:400px; */
-    height:200px;
-}
-#headNews{
-    background-size: auto 400px;
-}
 
 .headNews_img_container{
-    width:600px;
-    height:400px;
+    width:auto;
+    height:500px;
+    background-size: cover;
 }
 
-#headNewsRightSide1,
-#headNewsRightSide2,
-#headNewsRightSide3,
-#headNewsRightSide4{
-    background-size: auto 200px;
+#headNews_BGImage{
+    background-size: 1200px 600px;
+    /* min-width: 1200px; */
+    background-repeat: no-repeat;
+    background-position: top bottom;
+    -webkit-animation: mymove 15s infinite; 
+    animation: mymove 15s infinite;
 }
+@-webkit-keyframes mymove {
+    50% {background-position: center;}
+}
+
+@keyframes mymove {
+    50% {background-position: center;}
+}
+
+
 
 /* line Two Section */
 
@@ -228,4 +247,29 @@ html{
 .lineTwoSection{
     margin: 20px 0 0 0;
     color: #ffffff;
+}
+
+.lineTwoSection_individual_container{
+    /* width:400px; */
+    height:180px;
+}
+
+#lineTwoSection_background_1,
+#lineTwoSection_background_2,
+#lineTwoSection_background_3,
+#lineTwoSection_background_4{
+    
+    background-size: auto 180px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#lineTwoSection_title_1,
+#lineTwoSection_title_2,
+#lineTwoSection_title_3,
+#lineTwoSection_title_4{
+    padding:5px;
+    font-size: 15px;
+
 }

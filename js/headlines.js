@@ -29,37 +29,43 @@ newsRequest.onload = function () {
 
     console.log("newsArray="+newsArray);
     console.log("newsArray.length="+newsArray.length);
-    var showNo = newsArray[6];
+    var showNo = newsArray[0];
     
 
     //Set the headline news (biggest)
-    document.getElementById("title").innerText = newsJson['articles'][showNo]['title'];
-    document.getElementById("description").innerText = newsJson['articles'][showNo]['description'];
+    document.getElementById("headNews_title").innerText = newsJson['articles'][showNo]['title'];
+    document.getElementById("headNews_description").innerText = newsJson['articles'][showNo]['description'];
     
     var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
     var publishedDate = new Date(newsJson['articles'][showNo]['publishedAt']);
     var showPublishedDate = monthNames[currentDate.getMonth()] +' '+ publishedDate.getDate()+', '+publishedDate.getFullYear();
-    document.getElementById("publishedAt").innerText =showPublishedDate;
+    document.getElementById("headNews_publishedAt").innerText =showPublishedDate;
 
     var headNewsImageUrl =  newsJson['articles'][showNo]['urlToImage'] ;
     // document.getElementById("headNews").src = headNewsImageUrl;
     console.log('headNewsImageUrl='+headNewsImageUrl);
 
     console.log('headNewsImageUrl='+ "\"url('"+headNewsImageUrl+"')\"");
-    document.getElementById("headNews").style.backgroundImage = "url('" + headNewsImageUrl +"')";
+    document.getElementById("headNews_BGImage").style.backgroundImage = "url('" + headNewsImageUrl +"')";
 
     //Set the leadLine right side 4 news
     var last4newsLength = newsArray.length;
 
-    for (i=0; i< 4 ;i++){
-        // console.log(i);
-        var imageId= 'headNewsRightSide'+ (i+1);
-        // console.log('imageId= '+imageId);
-        var headNewsImageRightSideUrl = newsJson['articles'][newsArray[i]]['urlToImage'];
-        // console.log('headNewsImageRightSideUrl= '+headNewsImageRightSideUrl);
-        document.getElementById(imageId).src = headNewsImageRightSideUrl;
-        document.getElementById(imageId).style.backgroundImage = "url('" + headNewsImageRightSideUrl +"')";
+    var j = 0;
+    for (i=1; i< 5 ;i++){
+        var imageId= 'lineTwoSection_background_'+ (j+1);
+        
+        var lineTwoImageUrl = newsJson['articles'][newsArray[i]]['urlToImage'];
+        if (newsJson['articles'][newsArray[i]]['source']['id'] == "fox-news") {
+            lineTwoImageUrl = "https://" + lineTwoImageUrl;
+        }
+        document.getElementById(imageId).src = lineTwoImageUrl;
+        document.getElementById(imageId).style.backgroundImage = "url('" + lineTwoImageUrl +"')";
 
+        var titleId= 'lineTwoSection_title_'+ (j+1);
+        var lineTwoTitle = newsJson['articles'][newsArray[i]]['title'];
+        document.getElementById(titleId).innerText = lineTwoTitle;
+        j++;
     }
     
 
